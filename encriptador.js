@@ -29,7 +29,7 @@ function sacartextocaja(){
     }else{
         for (let i = 0; i < frase.value.length; i++) {
             let char_code = frase.value.charCodeAt(i);
-            if ((char_code >= 97 && char_code <= 122) || char_code == 32 || char_code == 10 ){
+            if ((char_code >= 97 && char_code <= 122) || char_code == 32 || char_code == 10 || char_code == 33 || char_code == 63){
               is_valid = true;
             } else {
               is_valid = false;
