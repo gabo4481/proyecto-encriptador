@@ -47,6 +47,7 @@ function sacartextocaja(){
     
 
 }
+console.log("hola");
 function textoEncriptado(frase){
     let fraseEncriptada = frase.replace(/e/img,"enter");
     fraseEncriptada = fraseEncriptada.replace(/i/img,"imes");
