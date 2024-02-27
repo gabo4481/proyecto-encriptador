@@ -1,6 +1,5 @@
 let resultado = document.getElementById("texto-desencriptado");
 let desactivadorCopia =  document.getElementById("boton-copia").removeAttribute("disabled");
-const pattern = new RegExp('^[a-z]+$', 'i');
 
 function encriptar(){
     
@@ -14,6 +13,10 @@ function desencriptar(){
     let texto = sacartextocaja();
     resultado.innerHTML = textoDesencriptado(texto);
     desactivadorCopia;
+}
+
+function mostrarTexto(){
+    document.getElementById("texto-desencriptado").style.display = "static"
 }
 
 function ocultar(){
@@ -39,6 +42,7 @@ function sacartextocaja(){
         
         if(is_valid){
             ocultar();
+            mostrarTexto();
             return frase.value;
         }else{
             alert("Solo se Aceptan Minusculas y Sin Acentos ni Caracteres Especiales.");
@@ -47,7 +51,6 @@ function sacartextocaja(){
     
 
 }
-console.log("hola");
 function textoEncriptado(frase){
     let fraseEncriptada = frase.replace(/e/img,"enter");
     fraseEncriptada = fraseEncriptada.replace(/i/img,"imes");

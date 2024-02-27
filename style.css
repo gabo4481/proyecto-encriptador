@@ -12,8 +12,6 @@ header{
     display: flex;
     flex-direction: row;
     align-content: center;
-    width: 100%;
-    height: 96px;
 }
 
 
@@ -27,7 +25,7 @@ header{
 .logo{
     float: inline-start;
     height: 50px;
-    padding-top: 20px;
+    margin: 0.5%;
 }
 
 .titulos{
@@ -53,28 +51,47 @@ em strong{
 
 .contenedor-flex{
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.section1{
+.section{
+    
     flex: 1;
-    top: 120px;
-    width: 70%;
-    height: 650px;
-    left: 30px;
     border-radius: 32px;
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
     transition: 1s all;
 }
 
+.section:first-child{
+    flex: 2;
+    justify-items: center;
+    align-items: center;
+    display: block;
+    margin: 0 auto;
+    transition: 1s all;
+}
+
+section:last-child{
+    background-color: white;
+    box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
+}
+
 .contenedorcajatexto{
-    position: relative;
-    padding-left: 5%;
-    padding-top: 10%;
     width: 80%;
     height: 60px;
+}
+
+.seccion01{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .cajatexto{
@@ -167,25 +184,7 @@ em strong{
 }
 
 
-.section2{
-    flex: 2;
-    top: 120px;
-    width: 25%;
-    height: 650px;
-    right: 10px;
-    border-radius: 32px;
-    position: absolute;
-    display: block;
-    background-color: white;
-    margin: 0 auto;
-    transition: 1s all;
-    box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
-}
-
-.section2:hover{
-    transform: scale(1.1);
-    background: #F3F5FC ;
-}
+/*seccion2*/
 
 
 .contenedor-muneco{
@@ -222,17 +221,14 @@ em strong{
 }
 
 .contenedortexto-copiar{
-    position: absolute;
-    top: 50px;
-    width: 320px;
-    height: 450px;
-    padding: 0;
-    margin-top: 10px;
     box-sizing: border-box;
-    margin-left: 10px;
+    padding: 0px;
+    margin: px;
+    width: 100%;
 }
 
 .texto-copia{
+    width: 100%;
     font-size: 25px;
     color: #0A3871;
     font-weight: 600px;
@@ -240,17 +236,16 @@ em strong{
 }
 
 .contenedorboton-copia{
-    top: 525px;
+    position: static;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
     width: 300px;
-    height: 67px;
-    left: 15px;
-    padding: 5px;
-    gap: 8px;
-    position: absolute;
+    
 }
 
+
 .boton-copiar{
-    width: 300px;
+    width: 100%;
     height: 67px;
     border-radius: 24px; 
     background-color: #F3F5FC;
@@ -279,13 +274,9 @@ em strong{
     color: white;
 }
 
-footer {
-    width: 100%;
-    position: relative;
-    top: 680px;
+.piedepagina {
     padding: 15px;
     text-align: center;
-}
 
 .copyright {
     font-weight: bold;
@@ -441,12 +432,10 @@ footer {
     }
 
     footer{
-        width: 100%;
-        position: absolute;
         padding: 15px;
         text-align: center;
         margin: 0 auto;
-        top: 165%;
+        background-color: #343A40;
     }
 
 }
@@ -512,12 +501,9 @@ footer {
 
     }
 
-    footer{
-        top: 1200px;
-        width: 100%;
+    .piedepagine{
         text-align: center;
-        margin: 0 auto;
-        padding: 0%;
+
     }
 
 }
