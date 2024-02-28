@@ -8,15 +8,9 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
-header{
-    width: 100%;
-}
-
-
 .informacion{
     display: flex;
     align-items: center;
-    width: 100%;
     border-radius: 20px;
     box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08) ;
     padding: 0.5%;
@@ -48,14 +42,15 @@ em strong{
 .contenedor-flex{
     display: flex;
     flex-direction: row;
-
+    margin: 20px;
+    justify-content: space-between;
 }
 
 .section:first-child{ 
-    width: 100%;
     border-radius: 32px;   
     transition: 1s all;
     margin: 20px; 
+    width: 70%;
 }
 
 .elementosseccion1{
@@ -65,6 +60,8 @@ em strong{
     align-content: center;
     align-items: flex-start;
     margin: 2.5%;
+    width: 100%;
+    height: 100%;
 }
 
 .contenedorcajatexto{
@@ -104,7 +101,6 @@ em strong{
 
 .contenedorbotones{
     padding-top: 10px;
-    margin: 0; 
     width: 680px;
     height: 67px;
     display: flex;
@@ -172,30 +168,26 @@ em strong{
 }
 
 .section:last-child:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     background: #F3F5FC ;
 }
 
-.elememtoseccion2{
+.elementosseccion2{
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-
-.contenedor-muneco{
-    width: 336px;
-    padding-top: 50px;
-}
 
 .contenedor-parrafos{
-    height: 122px;
+    width: 100%;
 }
 
 .contenedor-parrafos h3{
-    width: 336px;
-    height: 58px;
+    width: 100%;
     font-weight: 700px;
     font-size: 24px;
     line-height: 28.8px;
@@ -204,8 +196,7 @@ em strong{
     
 }
 .contenedor-parrafos p{
-    width: 336px;
-    height: 48px;
+    width: 100%;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
@@ -215,9 +206,8 @@ em strong{
 
 .contenedortexto-copiar{
     width: 100%;
-    height: 30rem;
+    height: 28rem;
     padding: 2%;
-    margin-top: 10px;
     box-sizing: border-box;
 }
 
@@ -243,7 +233,7 @@ em strong{
 
 .contenedorboton-copia{
     height: 67px;
-    padding: 2.5%;
+    width: 90%;
 }
 
 .boton-copiar{
@@ -265,9 +255,6 @@ em strong{
     gap: 8px;
 }
 
-.boton-copiar:disabled:hover{
-    transform: scale(1.0);
-}
 
 .boton-copiar:hover{
     transform: scale(0.9);
@@ -275,7 +262,8 @@ em strong{
     color: white;
 }
 
-.boton-copiar:disabled{
+.boton-copiar:hover:disabled{
+    transform: scale(1.0);
     background-color: #495057;
     color: white;
     cursor: default;
@@ -296,88 +284,45 @@ footer {
 /* tablet responsive*/
 @media only screen and (min-width: 768px) and (max-width:1023px){
     
-    .header{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .logo{
-        width: auto;
-    }
-
     .contenedor-flex{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 0px;
+        align-items: center;
         gap: 16px;
     }
 
-    .section1{
-        position: relative;
-        width: 100%;
-        height: 70%px;
+    .section:first-child{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: max-content;
     }
 
 
     .contenedorcajatexto{
-        position: absolute;
-        top: 40px;
-        width: 688px;
-        height: 48px;
+        height: 10rem;
     }
-
-    .alerta{
-        position: absolute;
-        margin: 0 auto;
-        width: 229px;
-        height: 18px;
-        top: 736px;
-        left: 12%;
-        gap: 8px;
-        padding: 0px;
-    }
-
-    .alerta img{
-        width: 16px;
-        height: 16px;
-    }
-
-    .alerta p{
-        width: 205px;
-        height: 18px;
-        font-weight: 400px;
-        font-size: 12px;
-        line-height: 18px;
-    }
-
+ 
     .contenedorbotones{
-        position: absolute;
         width: 688px;
         height: 67px;
-        top: 770px;
         gap: 24px;
     }
 
-    .boton-encriptar,.boton-desencriptar{
-        width: 332px;
-        height: 76px;
-        padding: 24px;
-    }
-
-    
-
-    .section2{
-        position: absolute;
-        display: block;
-        margin: 0 auto;
-        width: 80%;
-        height: 500px;
-        top: 110%;
-        left:8%;
+    .section:last-child{
+        width: 90%;
         padding: 32px;
         gap: 32px;
+    }
+
+    .elementosseccion2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
     }
 
     .contenedor-muneco{
@@ -385,139 +330,84 @@ footer {
         flex-grow: 0;
     }
 
-    .contenedor-parrafos{
-        padding-left: 20px;
-        position: relative;
-        width: 624px;
-        height: 150px;
-        gap: 16px;
-    }
-
-    .contenedor-parrafos h3{
-        position: relative;
-        width: 624px;
-        height: 29px;
-        font-size: 24px;
-        font-weight: 700px;
-        line-height: 28.8px;
-        text-align: center;
-    }
-
-    .contenedor-parrafos p{
-        position: relative;
-        width: 624px;
-        height: 24px;
-        font-weight: 400px;
-        font: 16px;
-        text-align: center;
-        line-height: 24px;
-        top: 40px;
-    }
-
     .contenedortexto-copiar{
-        position: absolute;
-        width: 624px;
-        height: 425px;
-        padding: 0;
+        height: 10rem;
         box-sizing: border-box;
-        padding-left: 30px;
-        top: 20px;
-    }
-
-    .texto-copia{
-        text-align: center;
-        font-size: 24px;
-    }
-
-    .contenedorboton-copia{
-        position: absolute;
-        width: 624px;
-        height: 67;
-        padding: 24px;
-        margin-left: 50px;
-        gap: 8px;
-        top: 450px;
-        left: 140px;
-    }
-
-    footer{
-        width: 100%;
-        position: absolute;
-        padding: 15px;
-        text-align: center;
-        margin: 0 auto;
-        top: 165%;
     }
 
 }
 
 @media only screen and (max-width: 767px){
-    header{
-        width: 100%;
-        height: 96px;
+
+    .informacion{
+        flex-direction: column;
     }
 
-    .contenedorcajatexto{
+    .contenedor-flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section:first-child{
+        width: 90%;
+    }
+
+    .elementosseccion1{
         width: 100%;
-        height: 5rem;
-        top: 2%;
+        align-items: center;
+    }
+
+    
+    .contenedorcajatexto{
+        height: 8rem;
+        width: 100%;
+    }
+
+    .cajatexto{
+        text-align: center;
+    }
+
+    .cajatexto::placeholder{
+        text-align: center;
+    }
+
+    .alerta{
+        height: 100%;
+        width: 100%;
     }
 
     .contenedorbotones{
         flex-direction: column;
         width: 100%;
-        top: 20%;
-        margin: 0 auto;
-
+        height: 100%;
     }
 
-    .alerta{
-        top: 19%;
-        margin: 0 auto;
+    .boton-encriptar,.boton-desencriptar{
+        width: 100%;
     }
-
-    .section2{
+    
+    .section:last-child{
         width: 90%;
-        top: 50rem;
-        flex-direction: column;
-        height: 400px;
-        margin: 0 auto;
+    }
+
+    .elementosseccion2{
+        margin: 2.5%;
+    
     }
 
     .contenedor-muneco{
         display: none;
     }
 
-    .contenedor-parrafos{
-        padding-top: 20%;
-        margin: 0 auto;
-    }
-
     .contenedortexto-copiar{
         box-sizing: border-box;
-        top: 5%;
-        height: 70%;
-        left: 5%;
-        width: 90%;
-    }
-
-    .texto-copia{
-        font-size: 18px;
+        height: 8rem;
     }
 
     .contenedorboton-copia{
-        box-sizing: border-box;
-        top: 78%;
-        margin: 0 auto;
-
+        width: 55%;
     }
 
-    footer{
-        top: 1200px;
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
-        padding: 0%;
-    }
 
 }
