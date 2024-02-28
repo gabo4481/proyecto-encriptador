@@ -23,7 +23,7 @@
     
     <main class="contenedor-flex">
         <section class="section">
-            <div class="seccion01">
+            <div class="elementosseccion1">
                 <div class="contenedorcajatexto">
                     <textarea placeholder="Ingrese el Texto Aqui" class="cajatexto" id="frase" rows="30" cols="30"></textarea>
                 </div>
@@ -36,10 +36,10 @@
                     <input type="button" onclick="desencriptar()" class="boton-desencriptar" value="Desencriptar">
                 </div>
             </div>
-           
+            
         </section>
         <section class="section">
-           <div seccion02>
+            <div class="elementosseccion2">
                 <div class="contenedor-muneco" id="muneco">
                     <img src="./image/Muñeco.png" alt="logo de muneco">
                 </div>
@@ -47,16 +47,17 @@
                     <h3>Ningun Mensaje fue<br> Encontrado</h3>
                     <p>Ingresa el texto que desees encriptar<br> o desencriptar.</p>
                 </div>
-                <div class="contenedortexto-copiar">
-                    <textarea class="texto-copia" id="texto-desencriptado"></textarea>
+                <div class="contenedortexto-copiar" id="contenedor-copiado" style="display: none;">
+                    <textarea class="texto-copia" id="texto-desencriptado" ></textarea>
                 </div>
                 <div class="contenedorboton-copia">
                     <input type="button" value="Copiar" disabled id="boton-copia" class="boton-copiar">
                 </div>
-           </div>
+            </div>
+            
         </section>
     </main>
-    <footer class="piedepagina">
+    <footer>
         <p class="copyright"> &copy Copyright Gabriel Alejandro Mendoza Leon- 2024</p>
     </footer>
     <script src="encriptador.js" defer></script>

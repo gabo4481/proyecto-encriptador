@@ -1,22 +1,22 @@
 let resultado = document.getElementById("texto-desencriptado");
-let desactivadorCopia =  document.getElementById("boton-copia").removeAttribute("disabled");
+
+function desactivarcopiar(){
+      document.getElementById("boton-copia").removeAttribute("disabled");
+}
+
 
 function encriptar(){
-    
     let texto = sacartextocaja();
-    resultado.innerHTML = textoEncriptado(texto);
-    desactivadorCopia;
-       
+    resultado.value = textoEncriptado(texto);     
 }
 
 function desencriptar(){
     let texto = sacartextocaja();
-    resultado.innerHTML = textoDesencriptado(texto);
-    desactivadorCopia;
+    resultado.value = textoDesencriptado(texto);
 }
 
-function mostrarTexto(){
-    document.getElementById("texto-desencriptado").style.display = "static"
+function mostrartexarea(){
+    document.getElementById("contenedor-copiado").style.display="block";
 }
 
 function ocultar(){
@@ -42,7 +42,8 @@ function sacartextocaja(){
         
         if(is_valid){
             ocultar();
-            mostrarTexto();
+            desactivarcopiar()
+            mostrartexarea();
             return frase.value;
         }else{
             alert("Solo se Aceptan Minusculas y Sin Acentos ni Caracteres Especiales.");
@@ -51,6 +52,7 @@ function sacartextocaja(){
     
 
 }
+
 function textoEncriptado(frase){
     let fraseEncriptada = frase.replace(/e/img,"enter");
     fraseEncriptada = fraseEncriptada.replace(/i/img,"imes");
@@ -71,8 +73,11 @@ function textoDesencriptado(frase){
 
 const botonCopiar = document.querySelector(".boton-copiar");
     botonCopiar.addEventListener("click", copiar = () => {
-        var contenido = document.querySelector(".texto-copia").textContent;
-        navigator.clipboard.writeText(contenido);
-        console.log("hola")
-    })
+        var contenido = document.querySelector(".texto-copia");
+        contenido.select();
+        document.execCommand("copy");
+        alert("Texto Copiado Con Exito!")
+    }
+    )
+
 
