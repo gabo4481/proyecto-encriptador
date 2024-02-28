@@ -97,6 +97,7 @@ em strong{
     display: flex;
     color: #495057;
     opacity: 0.8;
+    gap: 5px;
 }
 
 .contenedorbotones{
@@ -298,6 +299,7 @@ footer {
         align-items: center;
         width: max-content;
     }
+    
 
 
     .contenedorcajatexto{
@@ -356,6 +358,8 @@ footer {
     .elementosseccion1{
         width: 100%;
         align-items: center;
+        margin-bottom: 2.5%;
+        margin: 0% 0% 2.5% 0%;
     }
 
     
@@ -377,6 +381,11 @@ footer {
         width: 100%;
     }
 
+    .alerta img{
+        width: 16px;
+        height: 16px;
+    }
+
     .contenedorbotones{
         flex-direction: column;
         width: 100%;
@@ -392,7 +401,7 @@ footer {
     }
 
     .elementosseccion2{
-        margin: 2.5%;
+        margin-bottom: 2.5%;
     
     }
 
